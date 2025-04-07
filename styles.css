@@ -1,0 +1,548 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #f77f00;
+  --primary-color-dark: #d62828;
+  --secondary-color: #fafcff ;
+  --text-dark: #003049;
+  --text-light: #767268;
+  --extra-light: #ffffff;
+  --max-width: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.section__title {
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.section__subtitle {
+  font-size: 20px;
+  color: var(--text-dark);
+  font-weight: 600;
+  
+}
+
+.tips {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark);
+
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+nav {
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-size: 3rem;
+  font-weight: 800;
+  cursor: pointer;
+  color: #f77f00;
+}
+
+.nav__logo span {
+  color: var(--primary-color);
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transform: translateX(80%);
+  gap: 1rem;
+}
+
+.link a {
+  padding: 0 1rem;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+header {
+  background-color: var(--secondary-color);
+}
+
+.header__container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.header__image {
+  position: relative;
+}
+
+.header__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0.5rem solid var(--extra-light);
+  border-radius: 2rem;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header__image img:nth-child(1) {
+  width: 800px;
+  height: 650px;
+  transform: translate(-60%, -50%);
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(30%);
+}
+
+
+.header__content > div {
+  width: 400px;
+  display: grid;
+  gap: 1rem;
+}
+
+.header__content h1 {
+  font-size: 50px;
+  line-height: 4rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.header__content .action__btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  font-weight: 800;
+}
+
+.story {
+  display: flex;
+  align-items: right;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+
+
+.gallery__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.image__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.gallery__col {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  
+}
+
+.gallery__col img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  height: 600px;
+  width: 800px;
+  transform: translate(70%);
+}
+
+.gallery__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateX(-250%);
+  height: 60vh;
+}
+
+.gallery__content > div {
+  width: 400px;
+}
+
+.gallery__content .section__subtitle {
+  margin-bottom: 2rem;
+}
+
+
+
+.footer {
+  background-color: var(--text-dark);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  color: var(--secondary-color);
+}
+
+.footer__col h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.footer__col h3 {
+  color: #f77f00;
+}
+
+.footer__col p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer__col p:hover {
+  color: var(--primary-color);
+}
+
+.footer__col p span {
+  font-weight: 600;
+}
+
+.footer__col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.footer__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  border-top: 1px solid var(--text-light);
+}
+
+@media (width < 00px) {
+  .destination__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subscribe__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.style{
+  color: var(--secondary-color);
+  background-color: var(--text-dark);
+  background-image: linear-gradient(45deg, #f77f00, #fcbf49);
+  border-radius: 50px;
+}
+
+
+#calculator {
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator_heading {
+  color:#f77f00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+  margin-top: 150px;
+}
+
+#calculator div {
+  margin-bottom: 15px;
+}
+
+#calculator label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#calculator input[type="number"],
+#calculator select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#calculator select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 12px auto;
+  cursor: pointer;
+}
+
+#calculator button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#calculator button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#result span {
+  color: #007bff;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 14px;
+}
+
+
+#calculator-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#result p {
+  margin-bottom: 10px;
+}
+
+
+
+.contact_us {
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  align-items: center;
+  transform: translateX(50%);
+}
+
+
+.subscribe {
+  background-color: var(--secondary-color);
+}
+
+.subscribe__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.subscribe__form {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: -270px;
+}
+
+.subscribe__form form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  background-color: var(--extra-light);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
+  text-align: center;
+}
+
+.subscribe__form input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1rem;
+}
+
+/* electricity consumption */
+
+.electricity_consumption_p{
+  font-weight: 200;
+  font-size: 20px;
+  text-align: left;
+  height: 20vh;
+}
+
+.electricity_consumption{
+  font-weight: 700;
+  font-size: 45px;
+  text-align: left;
+  transform: translateX(7%);
+}
+.electricity_consumption_img {
+  width: 85%;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+
+/* electricity production */
+
+.electricity_production_p{
+  font-weight: 200;
+  font-size: 20px;
+  text-align: left;
+  height: 20vh;
+}
+
+.electricity_production{
+  font-weight: 700;
+  font-size: 45px;
+  text-align: left;
+  transform: translateX(7%);
+}
+
+.electricity_production_img {
+  width: 85%;
+  position: relative;
+  transform:translateY(10%);
+  margin-bottom: 100px;
+}
+
+/* electricity trade */
+
+.electricity_trade_p{
+  font-weight: 200;
+  font-size: 20px;
+  text-align: left;
+  height: 20vh;
+}
+
+.electricity_trade{
+  font-weight: 700;
+  font-size: 45px;
+  text-align: left;
+  transform: translateX(7%);
+  margin-top: 20px;
+  
+}
+
+.electricity_trade_img{
+  width: 85%;
+  position: relative;
+  transform:translateY(10%) ;
+}

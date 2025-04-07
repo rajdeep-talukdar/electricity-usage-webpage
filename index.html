@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Navigating the Currents</title>
+
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo">Navigating the Currents</div>
+      <ul class="nav__links">
+        <li class="link"><a href="#">Home</a></li>
+        <li class="link"><a href="#calculator_heading">Calculator</a></li>
+        <li class="link"><a href="#tips">Tips</a></li>
+        <li class="link"><a href="map1.html" target="_blank">Map</a></li>
+        <li class="link"><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <header>
+      <div class="section__container header__container">
+        <div class="header__image">
+          <img src="images/characters-people-holding-green-energy-icons_53876-43066.jpg" alt="header" />
+        </div>
+        <div class="header__content">
+          <div>
+            <h1>Embark on a Quest to Conserve Electricity with Us.</h1>
+            <p class="section__subtitle">
+              Discover our website for comprehensive guides, resources,
+              and tools to enhance the energy efficiency of your home or business.
+              Let's work together to build a greener, cleaner, and more cost-effective future!
+            </p>
+            <div class="action__btns">
+              <button class="btn"><a href="https://hareda.gov.in/tips-for-energy-conservation/" target="_blank">Explore</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="gallery">
+      <div class="section__container gallery__container">
+          <div class="gallery__col">
+            <img src="images/solar.jpg" alt="gallery" />
+          </div>
+        <div class="gallery__content">
+          <div>
+            <h2 class="section__title">
+              Tap into the sun's energy and step into a brighter tomorrow with solar power!
+            </h2>
+            <p class="section__subtitle">
+              Every little move towards solar energy counts,
+              making a huge impact on creating a cleaner and brighter world for everyone.
+              Start using solar power today and enjoy its benefits!
+            </p>
+            <a href="https://pmsuryaghar.gov.in/" target="_blank"><button class="btn">Apply Now</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section>
+<div class="electricity_consumption">Electricity Consumption
+<p class="electricity_consumption_p">
+  In 2019, world total electricity final consumption reached 22 848 TWh, up 1.7% from 2018.<br>
+  In 2019, OECD total electricity final consumption was 9 672 TWh, 1.1% lower<br>
+  than in 2018, while final electricity consumption in non-OECD countries was 13 176 TWh,<br>
+  an increase of 3.8% from 2018.<br>
+  <a href="https://www.iea.org/data-and-statistics/charts/world-electricity-final-consumption-by-sector-1974-2019" target="_blank">
+    <b>Click here to view in detail.</b></a>
+</p>
+<img src="images/electricity consumption.png" class="electricity_consumption_img">
+</div>
+</section>
+
+<section>
+<div class="electricity_production">Electricity Production
+<p class="electricity_production_p">
+  In 2019, world gross electricity production was 1.3% higher than 2018. Global electricity production<br>
+  has grown each year continuously since 1974, except for between 2008 and 2009,<br>
+  when the global financial crisis sharply cut demand. In 2019, non OECD countries share of production<br>
+  reached 58.6% of world electricity generation - more than double the share they held in 1974.<br>
+  Increasing energy efficiency limited annual production growth between 2010 and 2019 to just 0.1%<br>
+  in OECD countries (membership as of April 2021), compared with 4.6% in non OECD countries.<br>
+  <a href="https://www.iea.org/data-and-statistics/charts/total-gross-electricity-production-1974-2019" target="_blank">
+    <b>Click here to view in detail.</b></a>
+  </p>
+  <img src="images/electricity production.png" class="electricity_production_img">
+</div>
+</section>
+
+<section>
+<div class="electricity_trade">Electricity Trade
+<p class="electricity_trade_p">
+  Trading electricity between countries has become much more common in recent years.<br>
+  In the OECD, imports of electricity grew from 89 TWh in 1974 to 496 TWh in 2020,<br>
+  representing an average annual growth rate of 3.8%, compared to the 1.9% growth in<br>
+  overall electricity supply.<br>Substantial trade in electricity occurs in OECD Europe, where electricity imports<br>
+  grew at an average annual rate of 3.9% between 1974 and 2020.<br>
+  <a href="https://www.iea.org/data-and-statistics/charts/oecd-europe-electricity-imports-and-exports-1974-2020p" target="_blank">
+    <b>Click here to view in detail.</b></a>
+</p>
+<img src="images/electricity trade.png" class="electricity_trade_img">
+</div>
+</section>
+
+  <div class="calculator_heading" id="calculator_heading">Electricity Calculator</div>
+  <form id="calculator">
+    <div>
+      <label for="powerConsumption">Power Consumption:</label>
+      <input type="number" id="powerConsumption" name="powerConsumption" required>
+      <select name="powerUnit" id="powerUnit">
+        <option value="W">Watts (W)</option>
+        <option value="kW">Kilowatts (kW)</option>
+      </select>
+    </div>
+    <div>
+      <label for="runningTime">Running Time:</label>
+      <input type="number" id="runningTime" name="runningTime" required>
+      <select name="timeUnit" id="timeUnit">
+        <option value="hours">Hours</option>
+        <option value="days">Days</option>
+      </select>
+    </div>
+    <div>
+      <label for="energyPrice">Energy Price (per kWh or per Wh):</label>
+      <input type="number" id="energyPrice" name="energyPrice" step="0.01" required>
+    </div>
+    <button type="button" onclick="calculateElectricity()">Calculate</button>
+  </form>
+  
+  <div id="result"></div>
+  
+
+  
+  <script>
+    function calculateElectricity() {
+      // Get input values
+      const powerConsumption = parseFloat(document.getElementById('powerConsumption').value);
+      const powerUnit = document.getElementById('powerUnit').value;
+      const runningTime = parseFloat(document.getElementById('runningTime').value);
+      const timeUnit = document.getElementById('timeUnit').value;
+      const energyPrice = parseFloat(document.getElementById('energyPrice').value);
+  
+      // Convert power consumption to kW if in Watts
+      let powerInKilowatts;
+      if (powerUnit === 'W') {
+        powerInKilowatts = powerConsumption / 1000; // 1 kW = 1000 W
+      } else {
+        powerInKilowatts = powerConsumption;
+      }
+  
+      // Convert running time to hours if in days
+      let totalTimeInHours;
+      if (timeUnit === 'days') {
+        totalTimeInHours = runningTime * 24; // 1 day = 24 hours
+      } else {
+        totalTimeInHours = runningTime;
+      }
+  
+      // Calculate total power consumed
+      const totalPowerConsumed = powerInKilowatts * totalTimeInHours; // kWh
+  
+      // Calculate cost
+      const totalCost = totalPowerConsumed * energyPrice; // Indian Rupees
+  
+      // Display result
+      const resultElement = document.getElementById('result');
+      resultElement.innerHTML = `
+        <p>Total Power Consumed: ${totalPowerConsumed.toFixed(2)} kWh</p>
+        <p>Total Cost: ₹ ${totalCost.toFixed(2)}</p>
+      `;
+    }
+  </script>
+
+
+  
+
+  <!-- tips -->
+    <section class="trip" id="tips">
+      <div class="section__container trip__container">
+        <h2 class="section__title">Efficient Electricity Usage: Tips to Save Power and Money</h2>
+        <h1 class="tips">
+          <p>1. Turn off lights when not in use: Encourage everyone in your household or workplace to switch off lights in unoccupied rooms.
+          Consider using motion sensor lights or timers to automatically turn off lights when they're not needed.</p><br>
+
+          <p>2. Use energy-efficient appliances: When purchasing new appliances, look for the ENERGY STAR label,
+            which indicates that the product meets energy efficiency guidelines set by the Environmental Protection Agency.
+            Energy-efficient appliances consume less electricity and can save you money on your energy bills.</p><br>
+
+          <p>3. Unplug chargers when devices are fully charged: Many electronic devices continue to draw power even when they're not in use.
+            Unplug chargers for smartphones, laptops, and other devices once they're fully charged to prevent unnecessary energy consumption.</p><br>
+
+          <p>4. Take advantage of natural light: During the day, open curtains and blinds to allow natural light into your home or workspace.
+            Use task lighting rather than overhead lighting whenever possible to reduce electricity usage.</p><br>
+
+          <p>5. Set air conditioning to an optimal temperature: Adjust your thermostat to a comfortable but energy-efficient temperature.
+            In the summer, set your air conditioner to around 78°F (25°C) when you're at home and raise the temperature when you're away.
+            In the winter, lower the thermostat and use extra blankets or layers of clothing to stay warm.</p><br>
+
+          <p>6. Use ceiling fans: Ceiling fans can help circulate air and make rooms feel cooler in the summer and warmer in the winter.
+            Use ceiling fans in conjunction with your heating and cooling systems to reduce energy usage.</p><br>
+
+          <p>7. Seal air leaks: Inspect doors, windows, and other openings for air leaks that can allow warm or cool air to escape,
+            forcing your heating and cooling systems to work harder. Seal any gaps or cracks with weatherstripping or caulking to improve energy efficiency.</p><br>
+
+          <p>8. Opt for energy-efficient lighting: Replace traditional incandescent light bulbs with energy-efficient options such as LED or CFL bulbs.
+            These bulbs use less energy and last longer than incandescent bulbs, saving you money on both energy costs and replacement bulbs.</p><br>
+
+          <p>9. Use power strips: Plug electronic devices and appliances into power strips that can be easily switched off when not in use.
+            This prevents standby power consumption, also known as vampire power, which occurs when devices continue to draw power even when turned off.</p><br>
+
+          <p>10. Practice energy-saving habits: Encourage everyone in your household or workplace to adopt energy-saving habits such as turning off lights and electronics when leaving a room,
+            running full loads in the dishwasher and washing machine, and using cold water for laundry whenever possible. These small changes can add up to significant energy savings over time.</p>
+        </h1><br>
+       
+      </div>
+    </section>
+
+
+
+
+
+    <section class="subscribe">
+      <div class="section__container subscribe__container">
+        <div class="subscribe__content" id="con">
+          <h2 class="contact_us" id="contact">Contact us for any queries.</h2>
+        </div>
+        <div class="subscribe__form">
+          <form>
+            <input type="email" placeholder="Type your email."/>
+            <button class="btn" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="last_image">
+        <img src="images/yellow-light-bulb-idea-abstract-poster-with-electric-equipment-green-blossom-growing-from-power_1284-45002.jpg">
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>Navigating the Currents</h3>
+          <p>
+          Come aboard as we lead the charge for conserving electricity.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>The Team</h4>
+          <p>Rajdeep Talukdar</p>
+          <p>Subham Mahanty</p>
+          <p>Pavan Kumar Pollapalli</p>
+        </div>
+        <div class="footer__col">
+          <h4>Address</h4>
+          <p>
+            <span>Address:</span> Lovely Professional University, Phagwara, Punjab
+          </p>
+          <p><span>Email:</span> navigatingthecurrents@gmail.com</p>
+          <p><span>Phone:</span> +91 0000000000</p>
+      </div>
+    </footer>
+  </body>
+</html>
